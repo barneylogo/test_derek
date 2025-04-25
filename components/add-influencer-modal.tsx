@@ -288,7 +288,7 @@ export function AddInfluencerModal({
             />
           </div>
 
-          <div className="flex justify-end space-x-2 pt-2">
+          <div className="flex flex-col sm:flex-row justify-end gap-2 pt-2">
             <Button variant="outline" type="button" onClick={onClose}>
               Cancel
             </Button>
