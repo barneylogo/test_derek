@@ -464,8 +464,18 @@ export default function InfluencerDashboard() {
                   <SelectValue placeholder="Order" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="asc">Ascending</SelectItem>
-                  <SelectItem value="desc">Descending</SelectItem>
+                  <SelectItem value="asc">
+                    <div className="flex items-center">
+                      <ArrowUp className="h-4 w-4 mr-2" />
+                      Ascending
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="desc">
+                    <div className="flex items-center">
+                      <ArrowDown className="h-4 w-4 mr-2" />
+                      Descending
+                    </div>
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
