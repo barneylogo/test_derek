@@ -47,19 +47,19 @@ export function InfluencerRow({
       transition={{ duration: 0.2 }}
       className="bg-gradient-to-r from-card to-card/90 border border-border rounded-md p-3 flex  justify-between hover:shadow-md transition-shadow duration-200"
     >
-      <div className="flex flex-wrap  items-center justify-between w-full">
-        <div className="flex flex-wrap items-center space-x-3">
+      <div className="flex flex-col sm:flex-row  items-start sm:items-center justify-between w-full">
+        <div className="flex flex-wrap  items-center space-x-3 ">
           <Avatar className="h-20 w-20 border-2 border-yellow-500/20">
             <AvatarImage
               src={influencer.profilePicture || "/placeholder.svg"}
               alt={influencer.name}
             />
-            <AvatarFallback className="bg-yellow-500/10 text-yellow-600 dark:text-yellow-400">
+            <AvatarFallback className="bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 ">
               {getInitials(influencer.name)}
             </AvatarFallback>
           </Avatar>
           <div>
-            <h3 className="font-medium">{influencer.name}</h3>
+            <h3 className="font-medium ">{influencer.name}</h3>
             <div className="flex items-center mt-1 space-x-2">
               <Badge
                 variant="outline"
@@ -88,12 +88,12 @@ export function InfluencerRow({
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center space-x-6">
+        <div className="w-full sm:w-auto flex flex-wrap items-center space-x-6">
           <div className="hidden md:block text-sm text-muted-foreground">
             Added {formatDate(influencer.dateAdded)}
           </div>
 
-          <div className="w-32 space-y-1">
+          <div className="w-full sm:w-32 space-y-1">
             <div className="flex items-center justify-between text-xs">
               <span className="text-muted-foreground">Score</span>
               <span
